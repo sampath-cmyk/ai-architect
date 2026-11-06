@@ -218,3 +218,42 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==============================================================================
+# Generative AI & Agentic Workflow Exclusions (Added for Sampath Profile)
+# ==============================================================================
+
+# Local API Keys and Secrets variations
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# Agentic Orchestration Framework Traces & Logs
+# (LangChain, LangGraph, CrewAI, AutoGen)
+.langchain/
+langchain.log
+.crewai/
+.autogen/
+*.agent.log
+
+# Local Vector Databases & Vector Index Storage
+# (Prevents committing massive binary database folders)
+chroma_db/
+faiss_index/
+qdrant_storage/
+.chroma/
+.milvus/
+*.index
+*.pkl
+*.pickle
+
+# Heavy Assets & Local LLM Models
+# (Blocks downloaded GGUF files or massive Hugging Face model chunks)
+.hf_cache/
+models/
+*.gguf
+*.bin
+*.onnx
